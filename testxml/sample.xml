@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sample - Test" parallel="tests" thread-count="1">
+	
+	<!-- BrowserStack - Safari 
+	<parameter name="browser" value="Safari_OS X" />  
+	<parameter name="browserVersion" value="12.1" />
+	<parameter name="seleniumVersion" value="3.14.0" />
+	<parameter name="osVersion" value="Mojave" />
+ 	-->
+
+ 	 <!-- BrowserStack - Chrome - Windows  --> 
+	<parameter name="browser" value="chrome_windows" />  
+	<parameter name="browserVersion" value="78" />
+	<parameter name="seleniumVersion" value="3.5.2" />
+	<parameter name="osVersion" value="10" />
+ 	
+ 	<!-- BrowserStack - Firefox - Windows 
+	<parameter name="browser" value="Firefox_windows" />  
+	<parameter name="browserVersion" value="69" />
+	<parameter name="seleniumVersion" value="3.14.0" />
+	<parameter name="osVersion" value="10" />
+ 	 -->
+ 	 
+ 	 <!--Edge - Windows 
+ 	<parameter name="browser" value="MicrosoftEdge_Windows" />  
+	<parameter name="browserVersion" value="18.0" />
+	<parameter name="seleniumVersion" value="3.14.0" />
+	<parameter name="osVersion" value="10" />
+ 	  -->
+ 	  
+ 	  <!-- 
+ 	<parameter name="browser" value="IE_Windows" />  
+	<parameter name="browserVersion" value="11.0" />
+	<parameter name="seleniumVersion" value="3.14.0" />
+	<parameter name="osVersion" value="10" />
+ 	  -->
+ 	  
+	<parameter name="updateResultInTm4j" value="false" />
+	<parameter name="tm4jFolder" value="/CICD_Automation" />
+	<parameter name="tm4jDesc" value="Refer to Jenkins build reports for details" />
+	<parameter name="tm4jTestRunName" value="Dry Run Test123" />
+	
+	<parameter name="sfLEMode" value="true" />
+	<parameter name="language" value="English" />
+	
+	<parameter name="rpEnable" value="true" />
+	<parameter name="rpLaunch" value="TestLaunch" />
+	
+
+
+	<test name="Platform Test Two">
+		<classes>
+			<class name="HelloWorld">
+				<methods>
+					<include name="test" />
+				</methods>
+			
+			</class>
+		</classes>
+	</test>
+</suite>
